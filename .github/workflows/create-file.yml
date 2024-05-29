@@ -23,4 +23,4 @@ jobs:
 
       - name: Create and write to the file on EC2
         run: |
-          ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.HOST }} "echo '${{ github.event.inputs.content }}' > '/home/${{ secrets.USERNAME }}/${{ github.event.inputs.filename }}'"
+          ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.HOST }} "echo '${{ github.event.inputs.content }}' > '/home/ubuntu/${{ github.event.inputs.filename }}'"
